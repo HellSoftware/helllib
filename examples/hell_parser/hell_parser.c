@@ -29,7 +29,7 @@ int main()
                  * Look out for delim, which is '%',
                  * count is set to 2, so it will trigger when it finds "%%"
                  */
-                if (hell_parser_delim(parser, delim, 2, &buffer) == HELL_PARSER_OK)
+                if (hell_parser_delim_buffer_between(parser, delim, 2, &buffer) == HELL_PARSER_OK)
                 {
                     printf("Extracted content: '%s'\n", buffer);
                     free(buffer);
